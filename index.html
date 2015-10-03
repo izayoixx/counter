@@ -9,17 +9,19 @@
       count=0;
       function f1(){
         if(count!=10) count=count+1;
+	sampleNode.innerHTML=count;
       }
       function f2(){
         if(count!=0) count=count-1;
+	sampleNode.innerHTML=count;
       }
       function f3(){
         count=0;
+	sampleNode.innerHTML=count;
       }
-      sampleNode.innerHTML=count;
 
     </script>
-    <p id="count">0</p>
+    <p id="count">count</p>
   </body>
 </html>
 
