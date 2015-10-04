@@ -1,27 +1,28 @@
 <html>
   <body>
 
-    <input type="button" value="+" oneclick="f1()"><br>
-    <input type="button" value="-" oneclick="f2()"><br>
-    <input type="button" value="reset" oneclick="f3()"><br>
     <script language="javascript" type="text/javascript">
-      var sampleNode=document.getElementByID("count");
-      count=0;
-      function f1(){
+      var count=0;
+      function f1(n){
+      if(n==1){
         if(count!=10) count=count+1;
-	sampleNode.innerHTML=count;
       }
-      function f2(){
+      else if(n==2){
         if(count!=0) count=count-1;
-	sampleNode.innerHTML=count;
       }
-      function f3(){
+      else{
         count=0;
-	sampleNode.innerHTML=count;
       }
-
+      document.form1.in1.value = count;
+      }
     </script>
-    <p id="count">count</p>
+
+    <form name=form1>
+      <input type="text" size="20" name="in1" value="0">
+      <input type="button" value="+" onclick="f1(1)">
+      <input type="button" value="-" onclick="f1(2)">
+      <input type="button" value="reset" onclick="f1(3)">
+    </form>
+
   </body>
 </html>
-
